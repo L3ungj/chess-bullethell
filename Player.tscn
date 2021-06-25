@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprites/Knight0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Pawn0.png" type="Texture" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Rook0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/King0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Space.png" type="Texture" id=6]
+[ext_resource path="res://Sounds/shoot.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sprites/Bishop.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Queen0.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "R",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Q",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "K",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "N",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "B",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "P",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 58.0
+
+[node name="Player" type="Area2D"]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "P"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="bg" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( -180, -700 )
+scale = Vector2( 1.406, 1.406 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="bg2" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( -180, 0 )
+scale = Vector2( 1.406, 1.406 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]

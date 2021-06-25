@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Space.png" type="Texture" id=1]
+[ext_resource path="res://Title.gd" type="Script" id=2]
+
+[node name="Title" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 192, 320 )
+scale = Vector2( 1.31409, 1.31409 )
+texture = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 129.0
+margin_top = 278.0
+margin_right = 230.0
+margin_bottom = 362.0
+custom_constants/separation = 15
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 14.0
+text = "Bullethell game"
+
+[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 29.0
+margin_right = 101.0
+margin_bottom = 49.0
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 101.0
+margin_bottom = 84.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

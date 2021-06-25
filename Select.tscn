@@ -1,0 +1,218 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Select.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Knight0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Pawn0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/King0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Rook0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Bishop.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Queen0.png" type="Texture" id=7]
+
+[node name="Select" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = -32.0
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P" type="Button" parent="GridContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/P"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="N" type="Button" parent="GridContainer"]
+margin_left = 37.0
+margin_right = 69.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/N"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Label" type="Label" parent="GridContainer/N"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 16, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "16
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Button" parent="GridContainer"]
+margin_left = 74.0
+margin_right = 106.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/B"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Label" type="Label" parent="GridContainer/B"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 16, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "16
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Button" parent="GridContainer"]
+margin_left = 111.0
+margin_right = 143.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/R"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Label" type="Label" parent="GridContainer/R"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 16, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "16
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="K" type="Button" parent="GridContainer"]
+margin_left = 148.0
+margin_right = 180.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/K"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Label" type="Label" parent="GridContainer/K"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 16, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "16
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q" type="Button" parent="GridContainer"]
+margin_left = 185.0
+margin_right = 217.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="GridContainer/Q"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Label" type="Label" parent="GridContainer/Q"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 16, 16 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "16
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GridContainer/P" to="." method="_on_button_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="GridContainer/N" to="." method="_on_button_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="GridContainer/B" to="." method="_on_button_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="GridContainer/R" to="." method="_on_button_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="GridContainer/K" to="." method="_on_button_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="GridContainer/Q" to="." method="_on_button_pressed" binds= [ 5 ]]
