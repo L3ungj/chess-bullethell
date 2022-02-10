@@ -6,7 +6,7 @@ Move with mouse,
 change pieces with 1-6
 
 # Screenshots
-![title] (/screenshots/title.png?raw=true)
-![pawn] (/screenshots/pawn.png?raw=true)
-![queen] (/screenshots/queen.png?raw=true)
-![died] (/screenshots/died.png?raw=true)
+![title](/screenshots/title.png?raw=true)
+![pawn](/screenshots/pawn.png?raw=true)
+![queen](/screenshots/queen.png?raw=true)
+![died](/screenshots/died.png?raw=true)
